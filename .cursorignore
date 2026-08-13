@@ -1,0 +1,18 @@
+# Bloqueo duro: Cursor no indexa ni le da estos paths al Agent.
+# .gitignore ya se respeta; esto es extra.
+
+# IDE
+.idea/
+
+# Secrets
+.env
+.env.*
+
+# Build (cuando existan)
+node_modules/
+.vercel/
+.output/
+.nuxt/
+dist/
+.turbo/
+.cache/

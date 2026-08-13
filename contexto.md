@@ -17,7 +17,9 @@ El constraint de hoy: **ficus.uy desplegada en Vercel**. Todo lo que no empuje a
 | `volcado.md` | Dump de estrategia + productos + planes + billing | Mina de decisiones. No es spec. |
 | `roles.md` | Organigrama de 25 agentes | Fuera de alcance hoy. |
 | `vendedor.md` | Chatbot Gemini | Fuera de alcance hoy. Backend Vercel es la arquitectura correcta; el bot no entra en v1. |
-| `README.md` | Nombre, Instagram, dos colores | Input de branding, no identidad. |
+| `README.md` | Nombre, Instagram, dos colores | Input de identidad visual (paso 2), no de marca. |
+| `docs/01-branding.md` | Párrafo + 5 “no somos” | Fuente del paso 1. Congelado. |
+| `AGENTS.md` | Instrucciones para el agente | Cómo trabajar este repo. |
 
 ---
 
@@ -26,6 +28,10 @@ El constraint de hoy: **ficus.uy desplegada en Vercel**. Todo lo que no empuje a
 Cada ítem tiene un “done”. No se pasa al siguiente sin cerrarlo.
 
 ### 1. Branding — qué es y qué no es Ficus
+
+**Done.** Fuente: [`docs/01-branding.md`](docs/01-branding.md). Congelado. No se reabre en el copy.
+
+Borrador previo (no usar; la fuente es el archivo):
 
 **Es**
 - Estudio / aceleradora digital boutique.
@@ -39,8 +45,6 @@ Cada ítem tiene un “done”. No se pasa al siguiente sin cerrarlo.
 - Netuy: hosting + WordPress a volumen.
 - El facturador DGI, Kill Bill, ni una plataforma de campañas políticas. Productos futuros, no la marca de hoy.
 - Un equipo de 15 con Valeria en el chat.
-
-**Done:** 1 párrafo de posicionamiento + 5 bullets de “no somos”. Congelado. No se reabre en el copy.
 
 ### 2. Identidad visual
 
