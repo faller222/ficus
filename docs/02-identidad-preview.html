@@ -14,8 +14,8 @@
       --text: #1A1C16;
       --text-muted: #5C6154;
       --ink: #2F4218;
-      --leaf: #87b343;
-      --lime: #c5e476;
+      --leaf: #7cb44c;
+      --lime: #b6d77a;
       --focus: #2F4218;
       --pure-white: #FFFFFF;
       --pure-black: #000000;
@@ -27,7 +27,7 @@
       --text: #EDEFE6;
       --text-muted: #9AA090;
       --ink: #EDEFE6;
-      --focus: #c5e476;
+      --focus: #b6d77a;
     }
 
     * { box-sizing: border-box; }
@@ -184,6 +184,19 @@
     .white { background: #FFFFFF; }
     .black { background: #000000; }
 
+    .lockup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: var(--surface);
+    }
+
+    .lockup img {
+      width: min(100%, 22rem);
+      height: auto;
+    }
+
     .row {
       display: flex;
       flex-wrap: wrap;
@@ -229,6 +242,12 @@
       <figure class="ground white"><img src="../assets/leaf.svg" alt="Hoja sobre blanco"><figcaption>Blanco</figcaption></figure>
       <figure class="ground black"><img src="../assets/leaf.svg" alt="Hoja sobre negro"><figcaption>Negro</figcaption></figure>
     </div>
+
+    <h2>Lockup</h2>
+    <figure class="lockup">
+      <img src="../assets/logo.svg" alt="Ficus">
+    </figure>
+    <p class="muted">Hoja + FICUS trazado. El lema del PDF no entra.</p>
   </main>
 
   <script>

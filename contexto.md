@@ -49,7 +49,7 @@ Borrador previo (no usar; la fuente es el archivo):
 
 ### 2. Identidad visual
 
-**Done.** Fuente: [`docs/02-identidad.md`](docs/02-identidad.md). Congelado. Specimen: [`docs/02-identidad-preview.html`](docs/02-identidad-preview.html). Hoja: [`assets/leaf.svg`](assets/leaf.svg).
+**Done.** Fuente: [`docs/02-identidad.md`](docs/02-identidad.md). Congelado. Specimen: [`docs/02-identidad-preview.html`](docs/02-identidad-preview.html). Hoja: [`assets/leaf.svg`](assets/leaf.svg). Lockup: [`assets/logo.svg`](assets/logo.svg).
 
 Input previo (no usar; la fuente es el archivo):
 
