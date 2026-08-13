@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Ficus">
+  <defs>
+    <clipPath id="leaf" clipPathUnits="userSpaceOnUse">
+      <path d="M86.4 6.2C93 12.4 91.6 24.8 87.2 38.6C82.8 52.8 77.4 67.4 68.2 79.6C59.2 90.8 46.4 95.6 35.2 93.8C22.4 91.6 11.2 81.4 7.2 67.8C3.4 54.8 6.8 40.6 17.4 30.2C28.8 19.2 47.2 11.6 66.4 7.8C74.8 6.2 81.6 5.2 86.4 6.2Z"/>
+    </clipPath>
+    <mask id="veins" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="#fff"/>
+      <path d="M83.2 11.5C70 22.8 54.5 38.5 42 54.5C31.5 68.2 23.5 79 19 85.5" fill="none" stroke="#000" stroke-width="2.1" stroke-linecap="round"/>
+      <path d="M65.5 29.2C71.5 26.8 77.8 26.4 84 28.8" fill="none" stroke="#000" stroke-width="1.95" stroke-linecap="round"/>
+      <path d="M47.2 55.4C56.4 52.6 66.8 53.6 76.5 58.2" fill="none" stroke="#000" stroke-width="1.95" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#leaf)" mask="url(#veins)">
+    <path fill="#c5e476" d="M86.4 6.2C93 12.4 91.6 24.8 87.2 38.6C82.8 52.8 77.4 67.4 68.2 79.6C59.2 90.8 46.4 95.6 35.2 93.8C22.4 91.6 11.2 81.4 7.2 67.8C3.4 54.8 6.8 40.6 17.4 30.2C28.8 19.2 47.2 11.6 66.4 7.8C74.8 6.2 81.6 5.2 86.4 6.2Z"/>
+    <path fill="#87b343" d="M83.2 11.5C70 22.8 54.5 38.5 42 54.5C31.5 68.2 23.5 79 19 85.5L-2 102L-2 -2L92 -2Z"/>
+  </g>
+</svg>

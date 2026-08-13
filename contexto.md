@@ -17,8 +17,9 @@ El constraint de hoy: **ficus.uy desplegada en Vercel**. Todo lo que no empuje a
 | `volcado.md` | Dump de estrategia + productos + planes + billing | Mina de decisiones. No es spec. |
 | `roles.md` | Organigrama de 25 agentes | Fuera de alcance hoy. |
 | `vendedor.md` | Chatbot Gemini | Fuera de alcance hoy. Backend Vercel es la arquitectura correcta; el bot no entra en v1. |
-| `README.md` | Nombre, Instagram, dos colores | Input de identidad visual (paso 2), no de marca. |
+| `README.md` | Nombre, Instagram, dos colores | Input visual ya procesado. La fuente es `docs/02-identidad.md`. |
 | `docs/01-branding.md` | Párrafo + 5 “no somos” | Fuente del paso 1. Congelado. |
+| `docs/02-identidad.md` | Paleta, tipo, hoja | Fuente del paso 2. Congelado. |
 | `AGENTS.md` | Instrucciones para el agente | Cómo trabajar este repo. |
 
 ---
@@ -48,12 +49,14 @@ Borrador previo (no usar; la fuente es el archivo):
 
 ### 2. Identidad visual
 
+**Done.** Fuente: [`docs/02-identidad.md`](docs/02-identidad.md). Congelado. Specimen: [`docs/02-identidad-preview.html`](docs/02-identidad-preview.html). Hoja: [`assets/leaf.svg`](assets/leaf.svg).
+
+Input previo (no usar; la fuente es el archivo):
+
 - Instagram: `ficus__uy`
 - Acentos: `#c5e476` y `#87b343` (botones, hoja, hover). **No** como color de cuerpo sobre blanco: fallan contraste.
 - Texto: casi negro sobre claro, o claro sobre oscuro. WCAG AA mínimo (4.5:1).
 - Tono: plural de marca (“Ficus”, “nosotros”) en la web. Sin personajes falsos.
-
-**Done:** paleta (fondo, texto, acento, hover) + tipografía (1 sans, opcional 1 mono para guiño técnico) + light/dark si entra sin pelear el día.
 
 ### 3. Oferta de la home (una)
 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ficus — identidad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4F5EE;
+      --surface: #FFFFFD;
+      --text: #1A1C16;
+      --text-muted: #5C6154;
+      --ink: #2F4218;
+      --leaf: #87b343;
+      --lime: #c5e476;
+      --focus: #2F4218;
+      --pure-white: #FFFFFF;
+      --pure-black: #000000;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #12140F;
+      --surface: #1A1D16;
+      --text: #EDEFE6;
+      --text-muted: #9AA090;
+      --ink: #EDEFE6;
+      --focus: #c5e476;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 2.5rem 0 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .wordmark {
+      margin: 0 0 0.5rem;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .lead { margin: 0 0 0.75rem; }
+    .muted { margin: 0; color: var(--text-muted); }
+
+    a {
+      color: var(--ink);
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin: 0;
+      padding: 0.7rem 1.15rem;
+      border: 0;
+      background: var(--leaf);
+      color: #1A1C16;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cta:hover { background: var(--lime); }
+
+    .toggle {
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--focus);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+      gap: 0.75rem;
+    }
+
+    .swatch {
+      background: var(--surface);
+      padding: 0.6rem;
+    }
+
+    .swatch i {
+      display: block;
+      height: 3.25rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .swatch strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .swatch span {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .grounds {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .ground {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 10rem;
+      padding: 1.25rem 1rem 1rem;
+    }
+
+    .ground img {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    .ground figcaption { font-size: 0.8rem; }
+    .paper figcaption, .white figcaption { color: #5C6154; }
+    .carbon figcaption, .black figcaption { color: #9AA090; }
+
+    .paper { background: #F4F5EE; }
+    .carbon { background: #12140F; }
+    .white { background: #FFFFFF; }
+    .black { background: #000000; }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 36rem) {
+      .grounds { grid-template-columns: 1fr; }
+      .wordmark { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Identidad</h1>
+      <p>Specimen. No es la home.</p>
+    </div>
+    <button class="toggle" type="button" id="theme">Oscuro</button>
+  </header>
+
+  <main>
+    <h2>Tipo</h2>
+    <p class="wordmark">Ficus</p>
+    <p class="lead">Ficus es un estudio digital que diseña y opera la plataforma de tu negocio. Vos te ocupás de vender; nosotros de que el sistema funcione.</p>
+    <p class="muted">Source Sans 3. Secundario en muted. Una familia.</p>
+
+    <h2>Tokens</h2>
+    <div class="swatches" id="swatches"></div>
+
+    <h2>Uso</h2>
+    <div class="row">
+      <p><a href="#uso">Un enlace con underline lima</a></p>
+      <button class="cta" type="button">Agendar reunión</button>
+    </div>
+    <p class="muted">Tab para ver el focus. Hover en el CTA: hoja → lima. El texto del botón no cambia.</p>
+
+    <h2>Hoja</h2>
+    <div class="grounds">
+      <figure class="ground paper"><img src="../assets/leaf.svg" alt="Hoja sobre papel"><figcaption>Papel</figcaption></figure>
+      <figure class="ground carbon"><img src="../assets/leaf.svg" alt="Hoja sobre carbón"><figcaption>Carbón</figcaption></figure>
+      <figure class="ground white"><img src="../assets/leaf.svg" alt="Hoja sobre blanco"><figcaption>Blanco</figcaption></figure>
+      <figure class="ground black"><img src="../assets/leaf.svg" alt="Hoja sobre negro"><figcaption>Negro</figcaption></figure>
+    </div>
+  </main>
+
+  <script>
+    const tokens = [
+      ["--bg", "Fondo"],
+      ["--surface", "Superficie"],
+      ["--text", "Texto"],
+      ["--text-muted", "Secundario"],
+      ["--ink", "Tinta"],
+      ["--leaf", "Hoja"],
+      ["--lime", "Lima"],
+    ];
+
+    const root = document.documentElement;
+    const swatches = document.getElementById("swatches");
+    const themeBtn = document.getElementById("theme");
+
+    function hexOf(name) {
+      return getComputedStyle(root).getPropertyValue(name).trim();
+    }
+
+    function paint() {
+      swatches.replaceChildren();
+      for (const [name, label] of tokens) {
+        const hex = hexOf(name);
+        const el = document.createElement("div");
+        el.className = "swatch";
+        el.innerHTML = `<i style="background:${hex}"></i><strong>${label}</strong><span>${hex}</span>`;
+        swatches.append(el);
+      }
+      themeBtn.textContent = root.dataset.theme === "dark" ? "Claro" : "Oscuro";
+    }
+
+    themeBtn.addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      paint();
+    });
+
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      root.dataset.theme = "dark";
+    }
+    paint();
+  </script>
+</body>
+</html>

@@ -7,6 +7,7 @@ Repo de [ficus.uy](https://ficus.uy). Hoy son docs y decisiones. El constraint e
 1. Leer [`contexto.md`](contexto.md).
 2. Atacar el primer ítem sin **Done**. No mezclar pasos.
 3. Si el trabajo es marca, copy o home: leer [`docs/01-branding.md`](docs/01-branding.md). Está **congelado**. No se reabre.
+4. Si el trabajo es visual o HTML: leer [`docs/02-identidad.md`](docs/02-identidad.md). Está **congelado**. No se reabre.
 
 ## No hacer
 
@@ -21,7 +22,8 @@ Repo de [ficus.uy](https://ficus.uy). Hoy son docs y decisiones. El constraint e
 |---|---|
 | `contexto.md` | Orden de ataque. Abrir primero. |
 | `docs/01-branding.md` | Marca. Congelado. |
-| `README.md` | Input visual (Instagram, hex). No es identidad. |
+| `docs/02-identidad.md` | Identidad visual. Congelado. |
+| `README.md` | Input visual ya procesado. No es identidad. |
 | `volcado.md` | Mina de decisiones. No es spec. Leer por path solo si hace falta. |
 | `roles.md` / `vendedor.md` | Fuera de alcance. |
 | `archive/` | Dumps ya procesados. Muerto. No leer. No implementar. |
