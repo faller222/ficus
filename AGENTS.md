@@ -24,6 +24,7 @@ Repo de [ficus.uy](https://ficus.uy). Hoy son docs y decisiones. El constraint e
 | `README.md` | Input visual (Instagram, hex). No es identidad. |
 | `volcado.md` | Mina de decisiones. No es spec. Leer por path solo si hace falta. |
 | `roles.md` / `vendedor.md` | Fuera de alcance. |
+| `archive/` | Dumps ya procesados. Muerto. No leer. No implementar. |
 
 ## Voz
 

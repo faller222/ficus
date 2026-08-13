@@ -1,0 +1,37 @@
+---
+description: Al archivar o avanzar un paso, actualizar AGENTS.md e ignores. No dejar listas muertas.
+alwaysApply: true
+---
+
+# Ignores vivos
+
+Cuando un dump se termina de procesar, se mueve a `archive/`. En el mismo cambio se actualizan las reglas. No se deja el nombre viejo en ningún ignore ni en `AGENTS.md`.
+
+## Destino
+
+- `archive/` es el cajón. Git lo versiona. Cursor no lo indexa.
+- No poner `archive/` en `.gitignore`.
+- No listar archivos adentro de `archive/`. La única línea de dumps es `archive/`.
+
+## Qué tocar en el mismo commit / mismo cambio
+
+1. Mover el archivo a `archive/`.
+2. Sacarlo de `.cursorindexingignore`. Si ya no queda ningún dump en la raíz, ese archivo queda así:
+
+```
+archive/
+```
+
+3. Sacarlo de `AGENTS.md` (tabla Fuentes, “No hacer”, cualquier “leer por path”). Una línea alcanza: `archive/` es muerto. No leer. No implementar.
+4. Sacarlo de `contexto.md` si todavía lo nombra como archivo vivo.
+5. `.cursorignore` y `.gitignore` no se tocan por un dump. Esos son IDE, secrets y build.
+
+## Ejemplo
+
+Hoy: `volcado.md` en la raíz → está en `.cursorindexingignore` y en `AGENTS.md`.
+Mañana: `archive/volcado.md` → desaparece de esas listas. Queda `archive/`.
+
+## No hacer
+
+- No agregar ignores “por las dudas” (node_modules ya está).
+- No duplicar esta regla en prosa larga dentro de `AGENTS.md`.

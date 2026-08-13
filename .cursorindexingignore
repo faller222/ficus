@@ -1,6 +1,10 @@
-# Fuera del índice semántico. El Agent puede leerlos por path.
-# Son dump, no spec: ver AGENTS.md y contexto.md.
+# Fuera del índice. El Agent puede leer por path.
+# Dumps en raíz: lista puntual. Cuando pasen a archive/, borrar esas líneas.
+# La regla permanente de docs muertos es una sola: archive/
+
+archive/
 
 volcado.md
 roles.md
 vendedor.md
+
