@@ -7,7 +7,7 @@ El copy (paso 4) no reabre este archivo.
 
 ## Párrafo de posicionamiento
 
-Ficus es un estudio digital que diseña y opera la plataforma de tu negocio. Vos te ocupás de vender; nosotros de que el sistema funcione.
+Ficus es un estudio digital que diseña y opera la plataforma de tu negocio. Vos te encargás del negocio; nosotros de que el sistema funcione.
 
 ---
 
@@ -37,7 +37,8 @@ Ficus es un estudio digital que diseña y opera la plataforma de tu negocio. Vos
 - Categoría: estudio que opera. No aceleradora.
 - Cliente que escribe la marca: negocio que ya factura.
 - Código fuera del párrafo. Vive en cómo trabajamos / contrato.
-- Memoria de 10 segundos: vos vendés, nosotros operamos.
+- Memoria de 10 segundos: vos el negocio, nosotros el sistema.
+- “Vender” reabierto y cerrado. Quedó negocio + nosotros. No operación.
 - Boutique = tono interno. Nunca categoría ni hero.
 - Aceleradora = palabra muerta.
 - Párrafo y cinco “no somos” congelados en este archivo.

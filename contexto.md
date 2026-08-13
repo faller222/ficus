@@ -20,6 +20,7 @@ El constraint de hoy: **ficus.uy desplegada en Vercel**. Todo lo que no empuje a
 | `README.md` | Nombre, Instagram, dos colores | Input visual ya procesado. La fuente es `docs/02-identidad.md`. |
 | `docs/01-branding.md` | Párrafo + 5 “no somos” | Fuente del paso 1. Congelado. |
 | `docs/02-identidad.md` | Paleta, tipo, hoja | Fuente del paso 2. Congelado. |
+| `docs/03-oferta.md` | Dos frases + CTA | Fuente del paso 3. Congelado. |
 | `AGENTS.md` | Instrucciones para el agente | Cómo trabajar este repo. |
 
 ---
@@ -60,6 +61,10 @@ Input previo (no usar; la fuente es el archivo):
 
 ### 3. Oferta de la home (una)
 
+**Done.** Fuente: [`docs/03-oferta.md`](docs/03-oferta.md). Congelado. El copy no reabre qué se vende ni el CTA.
+
+Borrador previo (no usar; la fuente es el archivo):
+
 Una frase. No cuatro planes con precios.
 
 Ejemplo de dirección (se reescribe en el paso 4, no se publica así):
@@ -68,8 +73,6 @@ Ejemplo de dirección (se reescribe en el paso 4, no se publica así):
 En la home **no** van USD 20, créditos, Starter/Pro/Star/Gold. Eso es conversación comercial, no landing.
 
 CTA único: agendar reunión. Contacto como respaldo.
-
-**Done:** oferta en 2 frases + CTA nombrado (Calendly / Calendar). Cero tabla de precios.
 
 ### 4. Copy en español
 
