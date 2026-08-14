@@ -36,6 +36,39 @@
 
     html {
       scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--leaf) color-mix(in srgb, var(--text) 10%, var(--bg));
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: var(--cta-text);
+    }
+
+    ::-moz-selection {
+      background: var(--lime);
+      color: var(--cta-text);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: color-mix(in srgb, var(--text) 8%, var(--bg));
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--leaf);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--lime);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: var(--bg);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -502,7 +535,7 @@
       <a class="logo-link" href="#top">
         <img class="logo" src="assets/logo.svg" alt="Ficus">
       </a>
-      <a class="cta header-cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
+      <a class="cta header-cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" target="_blank" rel="noopener noreferrer">Agendá una reunión<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
     </div>
   </header>
 
@@ -513,7 +546,7 @@
           <h1 id="hero-title">Diseñamos y operamos la plataforma digital de tu negocio.</h1>
           <p class="lead">Ficus es un estudio digital. Vos te encargás del negocio; nosotros de que el sistema funcione.</p>
         </div>
-        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
+        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" target="_blank" rel="noopener noreferrer">Agendá una reunión<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
       </section>
 
       <section aria-labelledby="trabajo-title">
@@ -566,7 +599,7 @@
 
       <section class="cierre" aria-labelledby="cierre-title">
         <h2 id="cierre-title">¿Hablamos?</h2>
-        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
+        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" target="_blank" rel="noopener noreferrer">Agendá una reunión<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
         <p class="backup" id="contacto">Si preferís escribir:</p>
         <form class="contact-form" action="https://formspree.io/f/xjvlglwy" method="POST">
           <input type="hidden" name="source" value="Ficus">
@@ -622,7 +655,7 @@
   </footer>
 
   <div class="sticky-cta" aria-hidden="true">
-    <a class="cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" tabindex="-1">Agendá una reunión</a>
+    <a class="cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" target="_blank" rel="noopener noreferrer" tabindex="-1">Agendá una reunión</a>
   </div>
   <script>
     (function () {
