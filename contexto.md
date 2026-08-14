@@ -21,6 +21,7 @@ El constraint de hoy: **ficus.uy desplegada en Vercel**. Todo lo que no empuje a
 | `docs/01-branding.md` | Párrafo + 5 “no somos” | Fuente del paso 1. Congelado. |
 | `docs/02-identidad.md` | Paleta, tipo, hoja | Fuente del paso 2. Congelado. |
 | `docs/03-oferta.md` | Dos frases + CTA | Fuente del paso 3. Congelado. |
+| `docs/04-copy.md` | Siete bloques de la home | Fuente del paso 4. Congelado. |
 | `AGENTS.md` | Instrucciones para el agente | Cómo trabajar este repo. |
 
 ---
@@ -76,6 +77,10 @@ CTA único: agendar reunión. Contacto como respaldo.
 
 ### 4. Copy en español
 
+**Done.** Fuente: [`docs/04-copy.md`](docs/04-copy.md). Congelado. El HTML no reabre los textos.
+
+Borrador previo (no usar; la fuente es el archivo):
+
 Secciones, en este orden:
 
 1. Hero: qué es Ficus + CTA
@@ -87,8 +92,6 @@ Secciones, en este orden:
 7. Footer: Instagram, contacto, “Ficus”
 
 Sin i18n hoy. Sin SOC2. Sin stack en la portada.
-
-**Done:** textos finales, no “borrador para pulir después”.
 
 ### 5. Diseño / HTML
 
