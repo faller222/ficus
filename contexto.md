@@ -95,6 +95,8 @@ Sin i18n hoy. Sin SOC2. Sin stack en la portada.
 
 ### 5. Diseño / HTML
 
+**Done.** Fuente: [`index.html`](index.html). Consume [`docs/02-identidad.md`](docs/02-identidad.md) y [`docs/04-copy.md`](docs/04-copy.md). No los reabre.
+
 Pilares de v1: mobile first, responsive, semántica, contraste, teclado.
 Design-as-code: HTML (o Nuxt mínimo) que se pueda ver en el teléfono, no ASCII ni Figma eterno.
 

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ficus es un estudio digital. Vos te encargás del negocio; nosotros de que el sistema funcione.">
+  <title>Ficus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4F5EE;
+      --surface: #FFFFFD;
+      --text: #1A1C16;
+      --text-muted: #5C6154;
+      --ink: #2F4218;
+      --leaf: #7cb44c;
+      --lime: #b6d77a;
+      --focus: #2F4218;
+      --cta-text: #1A1C16;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12140F;
+        --surface: #1A1D16;
+        --text: #EDEFE6;
+        --text-muted: #9AA090;
+        --ink: #EDEFE6;
+        --focus: #b6d77a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition: none !important;
+      }
+
+      .cta:hover,
+      .cta:active,
+      .card:hover,
+      .card:focus-within {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: 0.75rem;
+      z-index: 30;
+      padding: 0.6rem 0.9rem;
+      background: var(--surface);
+      color: var(--text);
+      transform: translateY(-150%);
+    }
+
+    .skip:focus {
+      transform: none;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+      transition: text-decoration-thickness 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration-thickness: 3px;
+    }
+
+    a:focus-visible,
+    .cta:focus-visible,
+    .skip:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.7rem 1.15rem;
+      border: 0;
+      background: var(--leaf);
+      color: var(--cta-text);
+      font: inherit;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      background: var(--lime);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px color-mix(in srgb, var(--text) 12%, transparent);
+    }
+
+    .cta:active {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .cta-lg {
+      min-height: 48px;
+      padding: 0.85rem 1.4rem;
+    }
+
+    .wrap {
+      width: min(58rem, 100%);
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .site-header {
+      background: var(--bg);
+      border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 4rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      text-decoration: none;
+    }
+
+    .logo {
+      display: block;
+      height: 2.5rem;
+      width: auto;
+    }
+
+    .header-cta {
+      flex-shrink: 0;
+    }
+
+    main {
+      padding-bottom: 2.5rem;
+    }
+
+    .hero {
+      padding: 2.75rem 0 3.25rem;
+    }
+
+    .hero-copy {
+      max-width: 38rem;
+    }
+
+    h1 {
+      margin: 0 0 0.85rem;
+      font-size: clamp(1.85rem, 6.2vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .lead {
+      margin: 0 0 1.75rem;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    section {
+      padding: 2.75rem 0;
+    }
+
+    h2 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    p { margin: 0 0 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .prose {
+      max-width: 38rem;
+    }
+
+    .prose p + p {
+      margin-top: 1.1rem;
+    }
+
+    .exclusivity {
+      max-width: 38rem;
+      margin: 1.75rem 0 0;
+      padding: 0.15rem 0 0.15rem 1.15rem;
+      border-left: 3px solid var(--leaf);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+    }
+
+    .section-intro {
+      max-width: 38rem;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      margin: 1.35rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 1.25rem 1.2rem 1.35rem;
+      border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--leaf) 50%, transparent);
+      box-shadow: 0 10px 28px color-mix(in srgb, var(--text) 8%, transparent);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .experiencia {
+      color: var(--text-muted);
+    }
+
+    .experiencia h2 {
+      color: var(--text);
+    }
+
+    .experiencia .prose {
+      margin: 0;
+    }
+
+    .cierre {
+      padding-top: 3.25rem;
+      padding-bottom: 3rem;
+    }
+
+    .cierre .backup {
+      margin: 1.15rem 0 0;
+      color: var(--text-muted);
+    }
+
+    .site-footer {
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .site-footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.25rem;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 39.99rem) {
+      .sticky-cta {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        padding: 0.65rem 1.25rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+        background: var(--surface);
+        border-top: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+        box-shadow: 0 -8px 24px color-mix(in srgb, var(--text) 6%, transparent);
+      }
+
+      .sticky-cta .cta {
+        width: 100%;
+      }
+
+      body {
+        padding-bottom: calc(4.85rem + env(safe-area-inset-bottom, 0px));
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo { height: 3rem; }
+
+      .hero { padding: 4rem 0 4.5rem; }
+
+      section { padding: 3.25rem 0; }
+
+      .cards--3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.1rem;
+      }
+
+      .cards--2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.1rem;
+      }
+
+      .card {
+        padding: 1.4rem 1.35rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-link" href="#top">
+        <img class="logo" src="assets/logo.svg" alt="Ficus">
+      </a>
+      <!-- paso 6: Calendar -->
+      <a class="cta header-cta" href="#">Agendá una reunión</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Diseñamos y operamos la plataforma digital de tu negocio.</h1>
+          <p class="lead">Ficus es un estudio digital. Vos te encargás del negocio; nosotros de que el sistema funcione.</p>
+        </div>
+        <!-- paso 6: Calendar -->
+        <a class="cta cta-lg" href="#">Agendá una reunión</a>
+      </section>
+
+      <section aria-labelledby="trabajo-title">
+        <h2 id="trabajo-title">Cómo trabajamos</h2>
+        <div class="prose">
+          <p>El problema no es publicar un sitio. Es que el sistema del negocio quede huérfano: se lanza, se paga, y después nadie lo opera.</p>
+          <p>Diseñamos la plataforma que hace falta. Después la operamos: que funcione, que se actualice, que no dependa de alguien que desapareció.</p>
+          <p>Ficus es dueño del código. El cliente es dueño del dominio y de los datos.</p>
+        </div>
+        <p class="exclusivity">Pocos clientes, trato directo.</p>
+      </section>
+
+      <section aria-labelledby="quien-title">
+        <h2 id="quien-title">Para quién</h2>
+        <p class="section-intro">Para el negocio que ya factura y necesita un sistema que no se caiga.</p>
+        <ul class="cards cards--3">
+          <li class="card">
+            <h3>Profesional</h3>
+            <p>Consultorio, estudio o marca personal que publica y atiende.</p>
+          </li>
+          <li class="card">
+            <h3>Pyme</h3>
+            <p>Comercio o taller que toma pedidos, cobra, y no puede perder el hilo.</p>
+          </li>
+          <li class="card">
+            <h3>Organización</h3>
+            <p>Institución que necesita una plataforma, no una campaña.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="casos-title">
+        <h2 id="casos-title">Casos Ficus</h2>
+        <div class="cards cards--2">
+          <article class="card">
+            <h3>MN — Martín Nocetti</h3>
+            <p>Un periodista en Maldonado necesitaba su medio digital: publicar notas, archivo de entrevistas y el programa en vivo. Él publica; nosotros operamos. <a href="https://nocetti.uy">nocetti.uy</a>.</p>
+          </article>
+          <article class="card">
+            <h3>Casa de repuestos</h3>
+            <p>Una casa de repuestos necesitaba controlar las notas de pedido sin planilla ni chat. Un sistema interno: carga, seguimiento, cierre. Sin URL pública.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="experiencia" aria-labelledby="experiencia-title">
+        <h2 id="experiencia-title">Experiencia</h2>
+        <p class="prose">Antes de Ficus, el fundador construyó sistemas para Antel, BASF y Ticketmaster. Esas empresas no son clientes de Ficus. Son el oficio que traemos a cada plataforma que operamos.</p>
+      </section>
+
+      <section class="cierre" aria-labelledby="cierre-title">
+        <h2 id="cierre-title">¿Hablamos?</h2>
+        <!-- paso 6: Calendar -->
+        <a class="cta cta-lg" href="#">Agendá una reunión</a>
+        <p class="backup">Si preferís escribir, <!-- paso 6: mailto --><a href="#">Contacto</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Ficus</p>
+      <p>Instagram <a href="https://www.instagram.com/ficus__uy/">ficus__uy</a></p>
+      <p><!-- paso 6: mailto --><a href="#">Contacto</a></p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <!-- paso 6: Calendar. Duplicado visual del CTA; el enlace real está en el header. -->
+    <a class="cta" href="#" tabindex="-1">Agendá una reunión</a>
+  </div>
+</body>
+</html>

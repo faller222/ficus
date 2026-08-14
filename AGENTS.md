@@ -25,6 +25,7 @@ Repo de [ficus.uy](https://ficus.uy). Hoy son docs y decisiones. El constraint e
 | `docs/02-identidad.md` | Identidad visual. Congelado. |
 | `docs/03-oferta.md` | Oferta de la home. Congelado. |
 | `docs/04-copy.md` | Copy de la home. Congelado. |
+| `index.html` | Home. Consume copy e identidad. No los reabre. |
 | `README.md` | Input visual ya procesado. No es identidad. |
 | `volcado.md` | Mina de decisiones. No es spec. Leer por path solo si hace falta. |
 | `roles.md` / `vendedor.md` | Fuera de alcance. |
