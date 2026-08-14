@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Ficus diseña y opera la plataforma de tu negocio. Vos te encargás de facturar; nosotros de que el sistema no se caiga.">
+  <title>Ficus · propuesta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F4F5EE;
+      --surface: #FFFFFD;
+      --text: #1A1C16;
+      --text-muted: #5C6154;
+      --ink: #2F4218;
+      --leaf: #7cb44c;
+      --lime: #b6d77a;
+      --focus: #2F4218;
+      --cta-text: #1A1C16;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12140F;
+        --surface: #1A1D16;
+        --text: #EDEFE6;
+        --text-muted: #9AA090;
+        --ink: #EDEFE6;
+        --focus: #b6d77a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition: none !important;
+      }
+
+      .cta:hover,
+      .cta:active,
+      .card:hover,
+      .card:focus-within {
+        transform: none;
+        box-shadow: none;
+      }
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.65;
+    }
+
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: 0.75rem;
+      z-index: 30;
+      padding: 0.6rem 0.9rem;
+      background: var(--surface);
+      color: var(--text);
+      transform: translateY(-150%);
+    }
+
+    .skip:focus {
+      transform: none;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+      transition: text-decoration-thickness 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration-thickness: 3px;
+    }
+
+    a:focus-visible,
+    .cta:focus-visible,
+    .skip:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.7rem 1.15rem;
+      border: 0;
+      background: var(--leaf);
+      color: var(--cta-text);
+      font: inherit;
+      font-weight: 600;
+      line-height: 1.2;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      background: var(--lime);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px color-mix(in srgb, var(--text) 12%, transparent);
+    }
+
+    .cta:active {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .cta-lg {
+      min-height: 48px;
+      padding: 0.85rem 1.4rem;
+    }
+
+    .wrap {
+      width: min(58rem, 100%);
+      margin: 0 auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .site-header {
+      background: var(--bg);
+      border-bottom: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 4rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      text-decoration: none;
+    }
+
+    .logo {
+      display: block;
+      height: 2.5rem;
+      width: auto;
+    }
+
+    .header-cta {
+      flex-shrink: 0;
+    }
+
+    main {
+      padding-bottom: 2.5rem;
+    }
+
+    .hero {
+      padding: 2.75rem 0 3.25rem;
+    }
+
+    .hero-copy {
+      max-width: 38rem;
+    }
+
+    h1 {
+      margin: 0 0 0.85rem;
+      font-size: clamp(1.85rem, 6.2vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+    }
+
+    .lead {
+      margin: 0 0 1.75rem;
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    section {
+      padding: 2.75rem 0;
+    }
+
+    h2 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    p { margin: 0 0 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .prose {
+      max-width: 38rem;
+    }
+
+    .prose p + p {
+      margin-top: 1.1rem;
+    }
+
+    .exclusivity {
+      max-width: 38rem;
+      margin: 1.75rem 0 0;
+      padding: 0.15rem 0 0.15rem 1.15rem;
+      border-left: 3px solid var(--leaf);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+    }
+
+    .section-intro {
+      max-width: 38rem;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      margin: 1.35rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 1.25rem 1.2rem 1.35rem;
+      border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--leaf) 50%, transparent);
+      box-shadow: 0 10px 28px color-mix(in srgb, var(--text) 8%, transparent);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .experiencia {
+      color: var(--text-muted);
+    }
+
+    .experiencia h2 {
+      color: var(--text);
+    }
+
+    .experiencia .prose {
+      margin: 0;
+    }
+
+    .cierre {
+      padding-top: 3.25rem;
+      padding-bottom: 3rem;
+    }
+
+    .cierre .backup {
+      margin: 1.15rem 0 0;
+      color: var(--text-muted);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .site-footer {
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .site-footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 1.25rem;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .footer-mark {
+      display: block;
+      height: 1.75rem;
+      width: auto;
+      color: currentColor;
+    }
+
+    .footer-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .footer-ig:hover {
+      color: var(--text);
+    }
+
+    .footer-ig svg {
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .footer-ig-handle {
+      text-decoration: underline;
+      text-decoration-color: var(--lime);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+    }
+
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 39.99rem) {
+      .sticky-cta {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        padding: 0.65rem 1.25rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+        background: var(--surface);
+        border-top: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+        box-shadow: 0 -8px 24px color-mix(in srgb, var(--text) 6%, transparent);
+      }
+
+      .sticky-cta .cta {
+        width: 100%;
+      }
+
+      body {
+        padding-bottom: calc(4.85rem + env(safe-area-inset-bottom, 0px));
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo { height: 3rem; }
+
+      .hero { padding: 4rem 0 4.5rem; }
+
+      section { padding: 3.25rem 0; }
+
+      .cards--3 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.1rem;
+      }
+
+      .cards--2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.1rem;
+      }
+
+      .card {
+        padding: 1.4rem 1.35rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo-link" href="#top">
+        <img class="logo" src="assets/logo.svg" alt="Ficus">
+      </a>
+      <!-- paso 6: Calendar -->
+      <a class="cta header-cta" href="#">Agendá una reunión</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Delegá el sistema. Quedate con el negocio.</h1>
+          <p class="lead">Ficus es un estudio digital. Diseñamos y operamos tu plataforma para que el negocio crezca sin interrupciones.</p>
+        </div>
+        <!-- paso 6: Calendar -->
+        <a class="cta cta-lg" href="#">Agendá una reunión</a>
+      </section>
+
+      <section aria-labelledby="trabajo-title">
+        <h2 id="trabajo-title">Cómo trabajamos</h2>
+        <div class="prose">
+          <p>Publicar un sitio es lo fácil. Lo que suele pasar después es lo caro: el sistema queda huérfano. Se lanza, se paga, y el que lo armó ya no está.</p>
+          <p>Por eso no entregamos y desaparecemos. Diseñamos la plataforma que hace falta y la operamos: que funcione, que se actualice, que tenga quién responda. Ficus es el socio de largo plazo del sistema, no un encargo puntual.</p>
+          <p>Ficus es dueño del código. El cliente es dueño del dominio y de los datos.</p>
+        </div>
+        <p class="exclusivity">Atención dedicada: tomamos los clientes que podemos operar bien.</p>
+      </section>
+
+      <section aria-labelledby="quien-title">
+        <h2 id="quien-title">Para quién</h2>
+        <p class="section-intro">Para quien ya factura y no puede permitirse que el sistema falle.</p>
+        <ul class="cards cards--3">
+          <li class="card">
+            <h3>Profesional</h3>
+            <p>Consultorio, estudio o marca personal: publicás y atendés. El sistema no es otro trabajo más.</p>
+          </li>
+          <li class="card">
+            <h3>Pyme</h3>
+            <p>Comercio o taller: pedidos y cobros siguen el hilo. Vos vendés; la operación no se pierde en una planilla.</p>
+          </li>
+          <li class="card">
+            <h3>Organización</h3>
+            <p>Institución: una plataforma que se opera todo el año, no una campaña que se apaga cuando termina el presupuesto.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="casos-title">
+        <h2 id="casos-title">Casos Ficus</h2>
+        <div class="cards cards--2">
+          <article class="card">
+            <h3>MN — Martín Nocetti</h3>
+            <p>Un periodista en Maldonado necesitaba su medio digital: publicar notas, archivo de entrevistas y el programa en vivo. Él publica; nosotros operamos. <a href="https://nocetti.uy" target="_blank" rel="noopener noreferrer">nocetti.uy<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>.</p>
+          </article>
+          <article class="card">
+            <h3>Casa de repuestos</h3>
+            <p>Una casa de repuestos necesitaba controlar las notas de pedido sin planilla ni chat. Un sistema interno: carga, seguimiento, cierre. Sin URL pública.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="experiencia" aria-labelledby="experiencia-title">
+        <h2 id="experiencia-title">Experiencia</h2>
+        <p class="prose">Antes de Ficus, el fundador construyó sistemas para Antel, BASF y Ticketmaster. Traemos esa ingeniería y ese rigor a la plataforma de tu negocio.</p>
+      </section>
+
+      <section class="cierre" aria-labelledby="cierre-title">
+        <h2 id="cierre-title">Revisemos cómo está tu plataforma.</h2>
+        <!-- paso 6: Calendar -->
+        <a class="cta cta-lg" href="#">Agendá una reunión</a>
+        <p class="backup">Si preferís escribir primero, <!-- paso 6: mailto --><a href="#">Contacto</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">
+        <svg class="footer-mark" xmlns="http://www.w3.org/2000/svg" viewBox="8 12 368 142" role="img" aria-label="Ficus">
+          <path fill="currentColor" d="M41.869 136.216 C10.336 103.926 20.129 73.561 51.392 46.482 C75.585 25.528 106.419 19.886 137.109 15.148 C130.499 23.685 125.507 33.191 123.689 44.311 C113.600 46.563 104.251 50.421 95.944 56.213 C87.443 62.140 80.059 70.074 74.119 80.362 L41.869 136.216 Z"/>
+          <path fill="currentColor" fill-opacity="0.55" d="M123.084 49.509 C122.991 50.841 122.942 52.195 122.941 53.573 C122.931 64.323 122.308 75.392 120.069 86.911 C113.502 85.070 106.846 84.209 100.097 84.379 C91.601 84.593 82.979 86.443 74.226 90.024 L78.380 82.830 C83.946 73.189 90.841 65.771 98.761 60.249 C106.055 55.163 114.243 51.668 123.084 49.509 Z"/>
+          <path fill="currentColor" fill-opacity="0.55" d="M119.038 91.746 C117.419 98.707 115.172 105.835 112.082 113.159 C100.088 141.585 77.555 149.588 46.033 138.852 L69.984 97.371 C80.292 92.185 90.367 89.557 100.224 89.309 C106.570 89.149 112.840 89.978 119.038 91.746 Z"/>
+          <g transform="translate(8.2 0)">
+            <path fill="currentColor" d="M157.030 103.037 L157.030 77.768 L181.738 77.768 L181.738 68.302 L157.030 68.302 L157.030 54.745 L184.947 54.745 L184.947 45.279 L147.565 45.279 L147.565 103.037 L157.030 103.037 Z"/>
+            <path fill="currentColor" d="M192.969 45.279h9.466v57.758h-9.466z"/>
+            <path fill="currentColor" d="M210.937 74.158 C210.937 90.523 224.254 103.839 240.618 103.839 C249.202 103.839 256.902 100.149 262.358 94.373 L255.699 87.635 C251.929 91.806 246.554 94.373 240.618 94.373 C229.468 94.373 220.403 85.308 220.403 74.158 C220.403 63.008 229.468 53.943 240.618 53.943 C246.554 53.943 251.929 56.510 255.699 60.681 L262.358 53.943 C256.902 48.087 249.202 44.477 240.618 44.477 C224.254 44.477 210.937 57.793 210.937 74.158 Z"/>
+            <path fill="currentColor" d="M292.600 103.839 C305.916 103.839 315.061 94.454 315.061 80.816 L315.061 45.279 L305.595 45.279 L305.595 80.816 C305.595 89.159 300.622 94.454 292.600 94.454 C284.658 94.454 279.605 89.159 279.605 80.816 L279.605 45.279 L270.139 45.279 L270.139 80.816 C270.139 94.454 279.284 103.839 292.600 103.839 Z"/>
+            <path fill="currentColor" d="M320.757 94.534 C327.174 100.470 335.036 103.919 344.582 103.919 C356.615 103.919 366.802 97.101 366.802 86.512 C366.802 75.923 357.497 71.591 346.828 68.543 C337.523 65.896 333.271 64.131 333.271 60.521 C333.271 56.430 337.122 53.943 343.780 53.943 C349.475 53.943 354.850 56.189 358.620 60.360 L365.359 53.702 C360.385 48.007 352.283 44.477 344.421 44.477 C332.549 44.477 323.725 50.413 323.725 60.601 C323.725 70.949 333.351 74.639 342.737 77.287 C352.604 80.094 357.337 82.341 357.337 86.752 C357.337 91.084 352.203 94.373 344.903 94.373 C337.844 94.373 332.228 92.127 327.174 87.635 L320.757 94.534 Z"/>
+          </g>
+        </svg>
+      </p>
+      <p>
+        <a class="footer-ig" href="https://www.instagram.com/ficus__uy/" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3.1" y="3.1" width="17.8" height="17.8" rx="5" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="12" cy="12" r="4.15" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+          </svg>
+          <span class="footer-ig-handle">FICUS__UY</span>
+          <span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+        </a>
+      </p>
+      <p><!-- paso 6: mailto --><a href="#">Contacto</a></p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <!-- paso 6: Calendar. Duplicado visual del CTA; el enlace real está en el header. -->
+    <a class="cta" href="#" tabindex="-1">Agendá una reunión</a>
+  </div>
+</body>
+</html>
