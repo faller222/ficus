@@ -63,15 +63,13 @@ Antes de Ficus, el fundador construyó sistemas para Antel, BASF y Ticketmaster.
 
 **Título.** ¿Hablamos?
 
-Agendá una reunión. Si preferís escribir, Contacto.
+Agendá una reunión. Si preferís escribir: Nombre, Correo, Mensaje, Enviar.
 
 ---
 
 ## 7. Footer
 
-Ficus. Instagram [`ficus__uy`](https://www.instagram.com/ficus__uy/). Contacto.
-
-El href de Calendar y el `mailto` se cargan en el paso 6. Acá se nombran. No se inventan URLs.
+Ficus. Instagram [`ficus__uy`](https://www.instagram.com/ficus__uy/). Contacto (lleva al form).
 
 ---
 
@@ -84,7 +82,7 @@ El href de Calendar y el `mailto` se cargan en el paso 6. Acá se nombran. No se
 - “Desarrollado por Ficus” en MN (no está en ese repo)
 - Horas, precio o “lo hicimos gratis” en los casos
 - Nombre comercial de la casa de repuestos
-- i18n, SOC2, Calendly, chatbot, formulario propio
+- i18n, SOC2, Calendly, chatbot
 
 ---
 
@@ -96,4 +94,4 @@ El href de Calendar y el `mailto` se cargan en el paso 6. Acá se nombran. No se
 - Caso MN: producto público (notas, vivo, archivo, dominio). Fuente: repo MN al aire, no el volcado.
 - Crédito Ficus en MN: prometido en el volcado, ausente en el repo. No se afirma.
 - Experiencia: tres nombres. La aclaración va adelante. No es “nuestros clientes”.
-- Contacto e Instagram no pitan. El botón es la reunión.
+- Contacto e Instagram no pitan. El botón es la reunión. El form es respaldo, no segundo pitch.

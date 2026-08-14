@@ -91,7 +91,10 @@
 
     a:focus-visible,
     .cta:focus-visible,
-    .skip:focus-visible {
+    .skip:focus-visible,
+    .contact-form input:focus-visible,
+    .contact-form textarea:focus-visible,
+    .form-submit:focus-visible {
       outline: 2px solid var(--focus);
       outline-offset: 3px;
     }
@@ -291,6 +294,81 @@
       color: var(--text-muted);
     }
 
+    .contact-form {
+      display: grid;
+      gap: 0.85rem;
+      max-width: 24rem;
+      margin: 1.25rem 0 0;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin: 0;
+      padding: 0.7rem 0.8rem;
+      border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-weight: 400;
+    }
+
+    .contact-form textarea {
+      min-height: 8rem;
+      resize: vertical;
+    }
+
+    .form-submit {
+      justify-self: start;
+      min-height: 44px;
+      padding: 0.65rem 1.1rem;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .form-submit:hover {
+      background: var(--surface);
+    }
+
+    .form-submit:disabled {
+      cursor: wait;
+      opacity: 0.7;
+    }
+
+    .form-status {
+      margin: 0;
+      min-height: 1.45em;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .form-status[data-state="ok"] {
+      color: var(--text);
+    }
+
+    .form-status[data-state="error"] {
+      color: var(--text);
+    }
+
+    .hp {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -424,8 +502,7 @@
       <a class="logo-link" href="#top">
         <img class="logo" src="assets/logo.svg" alt="Ficus">
       </a>
-      <!-- paso 6: Calendar -->
-      <a class="cta header-cta" href="#">Agendá una reunión</a>
+      <a class="cta header-cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
     </div>
   </header>
 
@@ -436,8 +513,7 @@
           <h1 id="hero-title">Diseñamos y operamos la plataforma digital de tu negocio.</h1>
           <p class="lead">Ficus es un estudio digital. Vos te encargás del negocio; nosotros de que el sistema funcione.</p>
         </div>
-        <!-- paso 6: Calendar -->
-        <a class="cta cta-lg" href="#">Agendá una reunión</a>
+        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
       </section>
 
       <section aria-labelledby="trabajo-title">
@@ -490,9 +566,26 @@
 
       <section class="cierre" aria-labelledby="cierre-title">
         <h2 id="cierre-title">¿Hablamos?</h2>
-        <!-- paso 6: Calendar -->
-        <a class="cta cta-lg" href="#">Agendá una reunión</a>
-        <p class="backup">Si preferís escribir, <!-- paso 6: mailto --><a href="#">Contacto</a>.</p>
+        <a class="cta cta-lg" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3">Agendá una reunión</a>
+        <p class="backup" id="contacto">Si preferís escribir:</p>
+        <form class="contact-form" action="https://formspree.io/f/xjvlglwy" method="POST">
+          <input type="hidden" name="source" value="Ficus">
+          <input type="hidden" name="_subject" value="Ficus">
+          <p class="hp" aria-hidden="true">
+            <label>No completar <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </p>
+          <label>Nombre
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Correo
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>Mensaje
+            <textarea name="message" required></textarea>
+          </label>
+          <button class="form-submit" type="submit">Enviar</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </div>
   </main>
@@ -524,13 +617,53 @@
           <span class="visually-hidden"> (se abre en una pestaña nueva)</span>
         </a>
       </p>
-      <p><!-- paso 6: mailto --><a href="#">Contacto</a></p>
+      <p><a href="#contacto">Contacto</a></p>
     </div>
   </footer>
 
   <div class="sticky-cta" aria-hidden="true">
-    <!-- paso 6: Calendar. Duplicado visual del CTA; el enlace real está en el header. -->
-    <a class="cta" href="#" tabindex="-1">Agendá una reunión</a>
+    <a class="cta" href="https://calendar.google.com/appointments/schedules/AcZssZ2McAYaM2_7sTOTGHx2WqknMO8aCXEnzhNHkt5wjTjbuF4MEtB__Z5dFJ-GJmE38d0VjshSRDR3" tabindex="-1">Agendá una reunión</a>
   </div>
+  <script>
+    (function () {
+      var form = document.querySelector(".contact-form");
+      if (!form) return;
+      var status = form.querySelector(".form-status");
+      var submit = form.querySelector(".form-submit");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.textContent = "";
+        status.removeAttribute("data-state");
+        submit.disabled = true;
+
+        var data = new FormData(form);
+        var payload = {
+          name: data.get("name"),
+          _replyto: data.get("email"),
+          email: data.get("email"),
+          message: data.get("message"),
+          source: data.get("source"),
+          _subject: data.get("_subject")
+        };
+
+        fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json", "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        }).then(function (res) {
+          if (!res.ok) throw new Error("fail");
+          form.reset();
+          status.dataset.state = "ok";
+          status.textContent = "Listo. Te escribimos.";
+        }).catch(function () {
+          status.dataset.state = "error";
+          status.textContent = "No se pudo enviar. Probá de nuevo.";
+        }).then(function () {
+          submit.disabled = false;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

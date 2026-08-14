@@ -18,9 +18,9 @@ Una oferta. No cuatro. Cero tabla de precios en la home.
 
 - **Único:** Agendá una reunión.
 - **Herramienta:** Google Calendar (cita programada). No Calendly.
-- **Respaldo:** contacto (`mailto`). Instagram vive en el footer, no es el CTA.
+- **Respaldo:** form (nombre, correo, mensaje) → Formspree. Hidden `source=Ficus`. Instagram vive en el footer, no es el CTA.
 
-El href de la cita se carga en el paso 6. Acá se nombra la herramienta, no se inventa la URL.
+El href de la cita y el endpoint del form están en el HTML.
 
 ---
 
@@ -28,7 +28,7 @@ El href de la cita se carga en el paso 6. Acá se nombra la herramienta, no se i
 
 - USD 20, créditos, Starter / Pro / Star / Gold
 - “Equipo de ventas”
-- Calendly, formulario propio, chatbot
+- Calendly, chatbot, form como CTA
 - WaaS, planes, stack
 
 Eso es conversación comercial o archivo muerto.
@@ -41,4 +41,4 @@ Eso es conversación comercial o archivo muerto.
 - “Vender” no cubría profesional ni organización. Quedó negocio + nosotros. No operación.
 - Calendly es SaaS de más y marca de terceros. Calendar es donde ya vive la agenda.
 - “Equipo de ventas” murió en branding. El botón no lo resucita.
-- Contacto es red de seguridad, no segundo pitch.
+- Contacto es red de seguridad, no segundo pitch. El `mailto` a german@faller.com.uy filtraba la marca. Mismo POST de Formspree; `source=Ficus` separa.
